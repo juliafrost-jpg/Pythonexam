@@ -1,0 +1,6 @@
+*
+!exam4folder/
+!exam4folder/**
+!.gitignore
+id_ed25519_new
+id_ed25519_new.pub
