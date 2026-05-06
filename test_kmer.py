@@ -33,9 +33,7 @@ def test_main_multiple_sequences(tmp_path):
     """All sequences should appear in output - FAILS due to bug."""
     import sys
     input_file = tmp_path / "input.txt"
-    input_file.write_text("ACGTACGT
-TTTTGGGG
-")
+    input_file.write_text("ACGTACGT\nTTTTGGGG\n")
     output_file = tmp_path / "output.txt"
     sys.argv = ["kmer_analyzer.py", str(input_file), "4", str(output_file)]
     from kmer_analyzer import main
