@@ -27,7 +27,7 @@ def test_write(tmp_path):
     """Tests k-mer results are written to file in correct format."""
     f = tmp_path / "out.txt"
     write_results_to_file({"ACGT": {"count": 2, "next_chars": {"A": 1}}}, str(f))
-    assert "ACGT A:1" in f.read_text()
+    assert "ACGT count:2 A:1" in f.read_text()
 
 def test_main_multiple_sequences(tmp_path):
     """All sequences should appear in output - FAILS due to bug."""
